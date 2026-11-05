@@ -1,0 +1,109 @@
+{
+  "hash": "d811a871",
+  "configHash": "47f9a3a4",
+  "lockfileHash": "5e6f6588",
+  "browserHash": "b0566494",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "33277144",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "7b92db4a",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "7ee08421",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "49b33015",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "1450b66c",
+      "needsInterop": false
+    },
+    "@tsparticles/angular": {
+      "src": "../../../../../../node_modules/@tsparticles/angular/fesm2022/tsparticles-angular.mjs",
+      "file": "@tsparticles_angular.js",
+      "fileHash": "8e371901",
+      "needsInterop": false
+    },
+    "@tsparticles/slim": {
+      "src": "../../../../../../node_modules/@tsparticles/slim/browser/browser.js",
+      "file": "@tsparticles_slim.js",
+      "fileHash": "6c5361cc",
+      "needsInterop": false
+    },
+    "rxjs": {
+      "src": "../../../../../../node_modules/rxjs/dist/esm5/index.js",
+      "file": "rxjs.js",
+      "fileHash": "e71925dd",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "Container-6N5IOTFX": {
+      "file": "Container-6N5IOTFX.js"
+    },
+    "BlendPluginInstance-CSEVTAT5": {
+      "file": "BlendPluginInstance-CSEVTAT5.js"
+    },
+    "MovePluginInstance-I4TMUYIE": {
+      "file": "MovePluginInstance-I4TMUYIE.js"
+    },
+    "InteractivityPluginInstance-SPDW4XP4": {
+      "file": "InteractivityPluginInstance-SPDW4XP4.js"
+    },
+    "ImagePreloaderInstance-MGVY5T3W": {
+      "file": "ImagePreloaderInstance-MGVY5T3W.js"
+    },
+    "OverlapPluginInstance-744OZXXD": {
+      "file": "OverlapPluginInstance-744OZXXD.js"
+    },
+    "LinkInstance-EGIHE7FS": {
+      "file": "LinkInstance-EGIHE7FS.js"
+    },
+    "chunk-5EQPTJAA": {
+      "file": "chunk-5EQPTJAA.js"
+    },
+    "chunk-5X6GYRMJ": {
+      "file": "chunk-5X6GYRMJ.js"
+    },
+    "chunk-GB3GQLGT": {
+      "file": "chunk-GB3GQLGT.js"
+    },
+    "chunk-LOASKGXV": {
+      "file": "chunk-LOASKGXV.js"
+    },
+    "chunk-KIDNQMHF": {
+      "file": "chunk-KIDNQMHF.js"
+    },
+    "chunk-S3HEONXT": {
+      "file": "chunk-S3HEONXT.js"
+    },
+    "chunk-2SYOYM7I": {
+      "file": "chunk-2SYOYM7I.js"
+    },
+    "chunk-R4ZEFLFC": {
+      "file": "chunk-R4ZEFLFC.js"
+    },
+    "chunk-RSS3ODKE": {
+      "file": "chunk-RSS3ODKE.js"
+    },
+    "chunk-GOMI4DH3": {
+      "file": "chunk-GOMI4DH3.js"
+    }
+  }
+}

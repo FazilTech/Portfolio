@@ -1,0 +1,78 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+interface Project {
+  title: string;
+  layer: string;
+  description: string;
+  tags: string[];
+  link: string;
+}
+
+interface ExperienceItem {
+  role: string;
+  org: string;
+  period: string;
+  detail: string;
+}
+
+@Component({
+  selector: 'app-root',
+  imports: [CommonModule],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+export class App {
+  protected readonly year = new Date().getFullYear();
+
+  protected readonly stack = [
+    { label: 'Design', tool: 'Figma', color: 'sage' },
+    { label: 'Frontend', tool: 'Angular', color: 'amber' },
+    { label: 'Backend', tool: 'Spring Boot', color: 'sage' },
+    { label: 'Data', tool: 'Python', color: 'amber' },
+  ];
+
+  protected readonly projects: Project[] = [
+    {
+      title: 'Project One',
+      layer: 'Full Stack',
+      description: 'A end-to-end web application with a responsive Angular interface and a Spring Boot REST API, designed first in Figma to map every user flow before a line of code was written.',
+      tags: ['Angular', 'Spring Boot', 'Figma', 'PostgreSQL'],
+      link: '#'
+    },
+    {
+      title: 'Project Two',
+      layer: 'Frontend + Design',
+      description: 'A polished, component-driven UI built from a Figma design system, focused on accessibility, responsive layouts, and smooth state-driven interactions.',
+      tags: ['Angular', 'Figma', 'TypeScript'],
+      link: '#'
+    },
+    {
+      title: 'Project Three',
+      layer: 'Backend + Data',
+      description: 'A Spring Boot service layer paired with Python-based data processing, exposing clean APIs for analytics and reporting dashboards.',
+      tags: ['Spring Boot', 'Java', 'Python', 'REST API'],
+      link: '#'
+    },
+  ];
+
+  protected readonly experience: ExperienceItem[] = [
+    {
+      role: 'Software Development Intern',
+      org: 'Cognizant Technology Solutions (CTS)',
+      period: '2025',
+      detail: 'Contributed to full stack development tasks, gaining hands-on exposure to enterprise software practices, Java-based development, and collaborative team workflows.'
+    },
+    {
+      role: 'B.Tech, Computer Science & Engineering',
+      org: 'Specialization: Data Science & Full Stack Development',
+      period: 'Graduate',
+      detail: 'Built a strong foundation in software development, data analysis, and product management — from concept through to delivery.'
+    },
+  ];
+
+  protected readonly skills = [
+    'Angular', 'Spring Boot', 'Java', 'Python', 'Figma',
+    'TypeScript', 'REST APIs', 'SQL', 'Data Analysis', 'UI/UX Design'
+  ];
+}

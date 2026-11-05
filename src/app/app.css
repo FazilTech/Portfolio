@@ -1,0 +1,2751 @@
+html{
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeUp {
+  from{opacity: 0; transform: translateY(40px);}
+  to{opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeDown {
+  from{opacity: 0; transform: translateY(-30px);}
+  to{opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeLeft {
+  from{opacity: 0; transform: translateX(60px);}
+  to{opacity: 1; transform: translateX(0);}
+}
+
+@keyframes fadeRight {
+  from{opacity: 0; transform: translateX(-60px);}
+  to{opacity: 1; transform: translateX(0);}
+}
+
+@keyframes fadeIn {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@keyframes scaleIn{
+  from{opacity: 0; transform: scale(0.88);}
+  to{opacity: 1; transform: scale(1);}
+}
+
+@keyframes glowPulse {
+  0%, 100% {box-shadow: 0 0 0px #FF9B53;}
+  50% {box-shadow: 0 0 18px #FF9B5388;}
+}
+
+@keyframes availPulse {
+  0%, 100% {box-shadow: 0 0 0 0 rgba(0, 121, 16, 0.4);}
+  50% {box-shadow: 0 0 0 10px rgba(0, 121, 16, 0);}
+}
+
+@keyframes borderGlow {
+  0%, 100% {border-color: var(--line, #333);}
+  50% {border-color: #8800FF55;}
+}
+
+@keyframes typeCaret {
+  0%, 100% {border-right-color: #FF9B53;}
+  50% {border-right-color: transparent;}
+}
+
+@keyframes dividerExpand {
+  from {transform: scaleX(0); transform-origin: left;}
+  to {transform: scaleX(1); transform-origin: left;}
+}
+
+@keyframes floatY {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-10px);}
+}
+
+@keyframes spinSlow {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes aboutFloat {
+  0%, 100% {
+    transform: translateY(0) rotateX(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotateX(3deg);
+  }
+}
+
+@keyframes skill360 {
+  0%, 100% {
+    transform: translateY(0) rotateX(0deg);
+  }
+
+  50%{
+    transform: translateX(-10px) rotateY(360deg);
+  }
+}
+
+@keyframes settingsRotate {
+  0%, 100% {
+    transform: translateX(0) rotateX(0deg);
+  }
+
+  50%{
+    transform: translateX(0px) rotateZ(360deg);
+  }
+}
+
+@keyframes projectSpin {
+  0%, 100% {
+    transform: translateX(0) rotatex(0deg);
+  }
+
+  50%{
+    transform: translateX(20px) rotateX(2deg);
+  }
+}
+
+@keyframes textMove {
+  0% {
+    transform: perspective(500px) rotateY(0deg) rotateX(0deg);
+  }
+
+  25% {
+    transform: perspective(500px) rotateY(25deg) rotateX(10deg);
+  }
+
+  50% {
+    transform: perspective(500px) rotateY(0deg) rotateX(0deg);
+  }
+
+  75% {
+    transform: perspective(500px) rotateY(-25deg) rotateX(-10deg);
+  }
+
+  100% {
+    transform: perspective(500px) rotateY(0deg) rotateX(0deg);
+  }
+}
+
+@keyframes successAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(15px) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes successGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(34, 197, 94, 0.08);
+    }
+
+    50% {
+        box-shadow: 0 0 22px rgba(34, 197, 94, 0.2);
+    }
+}
+
+@keyframes checkPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+
+@keyframes errorAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes errorGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 70, 70, 0.08);
+    }
+
+    50% {
+        box-shadow: 0 0 22px rgba(255, 70, 70, 0.2);
+    }
+}
+
+@keyframes warningPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes backgroundAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.reveal{
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 3s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left{
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 2s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-left.visible{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right{
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 2s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-right.visible{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.delay-1 {transition-delay: 0.1s;}
+.delay-2 {transition-delay: 0.2s;}
+.delay-3 {transition-delay: 0.3s;}
+.delay-4 {transition-delay: 0.4s;}
+.delay-5 {transition-delay: 0.5s;}
+.delay-6 {transition-delay: 0.6s;}
+.delay-7 {transition-delay: 0.7s;}
+.delay-8 {transition-delay: 0.8s;}
+.delay-9 {transition-delay: 0.9s;}
+.delay-10 {transition-delay: 1s;}
+
+.home-page {
+  width: 100%;
+  padding: 0 120px;
+  position: relative;
+  min-height: 100vh;
+}
+
+ngx-particles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  pointer-events: none;
+}
+
+ngx-particles canvas {
+  pointer-events: none !important;
+}
+
+.home-page section {
+  position: relative;
+  z-index: 1;
+  color: var(--paper, #ffffff);
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3,
+.home-page p {
+  opacity: 1;
+  visibility: visible;
+}
+
+.section_divider{
+  border: none;
+  height: 1px;
+  background-color: #333;
+  margin: 80px 0;
+  animation: dividerExpand 3s ease forwards;
+}
+
+.horizontal_divider{
+  width: 2px;
+  height: 10px;
+  background-color: #FF9B53;
+  border: none;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  padding: 0 5%;
+  margin-top: 20px;
+  box-sizing: border-box;
+  z-index: 10000;
+
+  background: transparent;
+}
+
+.nav_mark {
+  font-family: 'Inspiration';
+  font-size: 1.75rem;
+  letter-spacing: 0.1rem;
+  color: #FF9B53;
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.nav_mark:hover{
+  transform: rotate(-3deg) scale(1.05);
+  box-shadow: 0 0 16px #FF9B5366;
+}
+
+.nav_link {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 14px 50px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(15px);
+  background: linear-gradient(
+    135deg,
+    rgba(35, 35, 45, 0.9),
+    rgba(20, 20, 28, 0.95)
+  );
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.708),
+    0 0 25px rgba(136, 0, 255, 0.112);
+}
+
+.nav_link a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav_link a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #FF9B53;
+  transition: width 0.3s ease;
+}
+
+.nav_link a:hover{
+  color: #FF9B53;
+}
+
+.nav_link a:hover::after{
+  width: 100%;
+}
+
+.nav_toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav_toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--paper, #fff);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.fazil_home{
+  padding: 20px 0px;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 200px;
+}
+
+.fazil_avalability{
+  font-size: 1.05rem;
+  letter-spacing: 0.14rem;
+  color: green;
+  background-color: #D0FFC4;
+  border: 1px solid #007910;
+  font-weight: bold;
+  padding: 10px 10px;
+  max-width: 17%;
+  border-radius: 20px;
+  animation: fadeIn 0.6s 0.3s ease both, availPulse 2.5s 1s infinite;
+}
+
+.home_details{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.home_left,
+.home_right{
+  flex: 1;
+  min-width: 0;
+}
+
+.home_name{
+  font-size: 6.5rem;
+  font-family: 'Abhaya Libre SemiBold';
+  line-height: 1.1;
+  margin: 0 0 10px;
+  animation: fadeRight 0.8s 0.4s cubic-bezier(0.22, 1, 0.36, 1) both, typeCaret 0.5s 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home_role{
+  font-size: 2.8rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #FF9B53;
+  margin: 0 0 6px;
+  animation: fadeRight 0.8s 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home_skill{
+  font-family: 'Aubrey';
+  font-size: 2rem;
+  padding: 10px 0px 20px;
+  margin: 0;
+  animation: fadeRight 0.8s 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home_buttons{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 25px 0;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home_viewwork,
+.home_hireme{
+  cursor: pointer;
+}
+
+.home_viewwork a, .home_hireme a{text-decoration: none;}
+
+.home_viewwork{
+  font-size: 1.75rem;
+  background-color: #FF9B53;
+  border: 1px solid #FF9B53;
+  font-family: 'Abhaya Libre SemiBold';
+  color: black;
+  padding: 15px 1.5rem;
+  border-radius: 10px;
+  transition: color 0.2s ease;
+}
+
+.home_viewwork:hover{
+  color: #FF9B53;
+  background-color: var(--line);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgb(255, 155, 83, 0.25);
+  transition: all 0.2s ease;
+}
+
+.home_hireme{
+  font-size: 1.75rem;
+  border: 1px solid white;
+  font-family: 'Abhaya Libre SemiBold';
+  color: white;
+  letter-spacing: 0.1rem;
+  padding: 15px 1.5rem;
+  border-radius: 10px;
+  transition: color 0.2s ease-in-out;
+}
+
+.home_hireme:hover{
+  color: black;
+  background-color: #FF9B53;
+  border-color: #FF9B53;
+  font-weight: bold;
+}
+
+.home_content{
+  font-size: 6.5rem;
+  font-family: 'Asul';
+  animation: fadeLeft 0.8s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home_content_colored{
+  display: flex;
+  animation: fadeLeft 0.8s 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.icon-3d-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 600px;
+  transform-style: preserve-3d;
+  animation: settingsRotate 5s ease-in-out infinite;
+}
+
+.home_content_icon {
+  width: 160px;
+  height: auto;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.home_content_colord_data{
+  font-size: 6.5rem;
+  font-family: 'Asul';
+  color: #8800FF;
+}
+
+.fazil_about{
+  min-height: 85vh;
+  flex: 1;
+  perspective: 1200px;
+}
+
+.about_card_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+.about_card {
+  position: relative;
+  width: 100%;
+  padding: 50px 40px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(35, 35, 45, 0.9),
+    rgba(20, 20, 28, 0.95)
+  );
+
+  border: 1px solid rgba(136, 0, 255, 0.4);
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(136, 0, 255, 0.08);
+
+  transform-style: preserve-3d;
+  animation: aboutFloat 3s ease-in-out infinite, fadeIn 3s 0.5s ease both;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.about_card:hover {
+  transform: rotateX(4deg) rotateY(-5deg) translateY(-8px);
+  border-color: #FF9B53;
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(255, 155, 83, 0.15);
+}
+
+.about_card_top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.about_card_dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #FF9B53;
+}
+
+.about_card_dot:nth-child(2) {
+  background: #8800FF;
+}
+
+.about_card_dot:nth-child(3) {
+  background: #777;
+}
+
+.about_card_tag {
+  margin-left: auto;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: #FF9B53;
+}
+
+.about_card_content {
+  padding: 25px 0;
+  transform: translateZ(25px);
+}
+
+.about_text {
+  font-size: 1.85rem;
+  line-height: 1.8;
+  padding: 20px;
+  font-family: 'Asul';
+  align-items: center;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+.about_card_footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #FF9B53;
+}
+
+
+.about_head{
+  display: grid;
+  margin-bottom: 50px;
+}
+
+.about_label{
+  font-size: 2.5rem;
+  color: #8800FF;
+  letter-spacing: 0.25rem;
+  font-family: 'Asul';
+}
+
+.about_title{
+  font-size: 3.5rem;
+  font-family: 'Asul';
+}
+
+.about_body{
+  font-size: 2.55rem;
+  font-family: 'Asul';
+  color: #ffffff88;
+}
+
+.fazil_skill{
+  height: 92vh;
+  flex: 1;
+}
+
+.skill_head{
+  display: grid;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.skill_label{
+  font-size: 2.5rem;
+  color: #8800FF;
+  letter-spacing: 0.25rem;
+  font-family: 'Asul';
+}
+
+.skill_title{
+  font-size: 3.5rem;
+  font-family: 'Asul';
+}
+
+.skill_grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px 40px;
+  margin-top: 100px;
+}
+
+.skill_card{
+  width: 220px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 1px solid var(--line);
+  border-radius: 50px;
+  font-size: 1.45rem;
+  font-family: 'Abhaya Libre SemiBold';
+  color: white;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease,
+              transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.skill_card img{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.skill_card span{
+  white-space: nowrap;
+}
+
+.center-left{
+  grid-column: 2;
+}
+
+.center-right{
+  grid-column: 3;
+}
+
+.skill_card:hover{
+  border-color: #FF9B53;
+  background: linear-gradient(
+    135deg,
+    rgba(35, 35, 45, 0.9),
+    rgba(20, 20, 28, 0.95)
+  );
+
+  border: 1px solid rgba(136, 0, 255, 0.4);
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(136, 0, 255, 0.08);
+
+  transform-style: preserve-3d;
+  animation: skill360 5s ease-in-out infinite;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.fazil_projects{
+  height: 100vh;
+  flex: 1;
+}
+
+.projects_head{
+  display: grid;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.projects_label{
+  font-size: 2.5rem;
+  color: #8800FF;
+  letter-spacing: 0.25rem;
+  font-family: 'Asul';
+}
+
+.projects_title{
+  font-size: 3.5rem;
+  font-family: 'Asul';
+}
+
+.projects_grid{
+  display: flex;
+  gap: 5rem;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+.project_card{
+  padding: 50px;
+  height: 35rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    135deg,
+    rgba(35, 35, 45, 0),
+    rgba(20, 20, 28, 0.436)
+  );
+
+  border: 1px solid rgba(136, 0, 255, 0.4);
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(136, 0, 255, 0.08);
+
+  transform-style: preserve-3d;
+  animation: projectSpin 3s ease-in-out infinite;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.project_card:hover{
+  transform: translateY(-100px);
+  box-shadow: 0 1px 15px rgba(255, 255, 255, 0.08), 0 0 0 1px #8800FF44;
+  border-color: #8800FF66;
+}
+
+.project_title{
+  font-size: 1.2rem;
+  font-family: 'asul';
+  color: #8800FF;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.project_name{
+  font-size: 1.75rem;
+  font-family: 'asul';
+  margin-bottom: 20px;
+}
+
+.project_description{
+  font-size: 1.15rem;
+  font-family: 'asul';
+  color: #ffffff4a;
+  flex-grow: 1;
+}
+
+.project_tags{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.project_tags span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 6px 10px;
+  transition: border-color 0.3s ease, border-radius 0.3s ease,
+              transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.project_tags span:hover{
+  border-color: #8800FF;
+  border-radius: 10px;
+  background: #8800FF22;
+  color: #cc88ff;
+  transform: translateY(-10px);
+}
+
+.project_card a{
+  text-decoration: none;
+  font-size: 1.15rem;
+  color: #FF9B53;
+}
+
+.project_future{
+  font-size: 1.3rem;
+  color: #ffffff4a;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.fazil_background {
+    min-height: 100vh;
+    flex: 1;
+    padding-bottom: 100px;
+}
+
+.background_head {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.background_label {
+    font-size: 2.5rem;
+    color: #8800FF;
+    letter-spacing: 0.25rem;
+    font-family: 'Asul';
+}
+
+.background_title {
+    font-size: 3.5rem;
+    font-family: 'Asul';
+    margin-bottom: 60px;
+}
+
+.background_grid {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.background_year {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: #FF9B53;
+    font-family: 'Asul';
+    text-align: right;
+    position: relative;
+}
+
+.background_year span {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid #FF9B5355;
+    border-radius: 30px;
+    background: #FF9B530D;
+    box-shadow: 0 0 20px #FF9B5310;
+}
+
+.background_card {
+    position: relative;
+    padding: 25px 30px;
+
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(
+        145deg,
+        rgba(136, 0, 255, 0.10),
+        rgba(20, 20, 28, 0.75),
+        rgba(255, 155, 83, 0.04)
+    );
+
+    border: 1px solid rgba(136, 0, 255, 0.4);
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(136, 0, 255, 0.08);
+
+    transform-style: preserve-3d;
+
+    animation:
+        backgroundFloat 5s ease-in-out infinite,
+        backgroundAppear 0.8s ease both;
+
+    animation-delay:
+        0s,
+        calc(var(--card-index, 0) * 0.15s);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.background_card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25px;
+    bottom: 25px;
+    width: 3px;
+
+    background: linear-gradient(
+        to bottom,
+        #8800FF,
+        #FF9B53
+    );
+
+    border-radius: 10px;
+    box-shadow: 0 0 15px #8800FF88;
+}
+
+.background_card:hover {
+    transform: perspective(1000px)
+               translateY(-12px)
+               rotateX(3deg)
+               rotateY(-2deg);
+
+    border-color: #FF9B5380;
+
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(136, 0, 255, 0.2),
+        0 0 15px rgba(255, 155, 83, 0.08);
+}
+
+.background_card_top {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    transform: translateZ(15px);
+}
+
+.background_card_dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #8800FF;
+    box-shadow: 0 0 8px #8800FF88;
+}
+
+.background_card_dot:nth-child(2) {
+    background: #FF9B53;
+    box-shadow: 0 0 8px #FF9B5388;
+}
+
+.background_card_dot:nth-child(3) {
+    background: #ffffff66;
+}
+
+.background_card_type {
+    margin-left: auto;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #ffffff55;
+    font-family: 'Courier New', monospace;
+}
+
+.background_card_content {
+    padding: 30px 0;
+    transform: translateZ(25px);
+}
+
+.background_role {
+    font-size: 2.25rem;
+    font-family: 'Asul';
+    margin-bottom: 10px;
+}
+
+.background_org {
+    font-size: 1.7rem;
+    font-family: 'Asul';
+    color: #8800FF;
+    margin-bottom: 15px;
+}
+
+.background_detail {
+    font-size: 1.2rem;
+    font-family: 'Asul';
+    color: #ffffff70;
+    line-height: 1.8;
+}
+
+.background_card_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: auto;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #ffffff45;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+
+    transform: translateZ(15px);
+}
+
+.contact_form{
+  flex: 1;
+  height: 60vh;
+}
+
+.contact_head{
+  display: grid;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.contact_label{
+  font-size: 2.5rem;
+  color: #8800FF;
+  letter-spacing: 0.25rem;
+  font-family: 'Asul';
+}
+
+.contact_title{
+  font-size: 3.5rem;
+  font-family: 'Asul';
+}
+
+.contact_subtitle{
+  font-size: 1.5rem;
+  color: #ffffff4a;
+}
+
+.contact_form{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact_input{
+  display: flex;
+  gap: 30px;
+}
+
+.contact_input input{
+  flex: 1;
+}
+
+.contact_form input,
+.contact_form textarea{
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+
+  color: white;
+  font-size: 1.35rem;
+  font-family: 'asul';
+
+  padding: 18px 22px;
+  outline: none;
+}
+
+.contact_form textarea{
+  min-height: 250px;
+  font-size: 1.8rem;
+  resize: none;
+}
+
+.contact_form input:focus, 
+.contact_form textarea:focus{
+  border-color:#FF9B53;
+}
+
+.contact_form button{
+  margin-top: 30px;
+  padding: 20px 30px;
+  font-size: 1.55rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transition: all 0.3s ease;
+  color: white;
+  cursor: pointer;
+    background: linear-gradient(
+    135deg,
+    rgba(35, 35, 45, 0.9),
+    rgba(20, 20, 28, 0.95)
+  );
+  border: 1px solid rgba(136, 0, 255, 0.4);
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(136, 0, 255, 0.08);
+}
+
+.contact_form button:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 5px 5px rgba(248, 155, 82, 0.3);
+}
+
+.form_field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.validation_error {
+  color: #ff6b6b;
+  font-size: 13px;
+  margin-top: 6px;
+  margin-left: 4px;
+}
+
+.form_field input.ng-invalid.ng-touched,
+.form_field textarea.ng-invalid.ng-touched {
+  border-color: #ff6b6b;
+}
+
+.success-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    width: fit-content;
+    max-width: 90%;
+    margin: 2px auto;
+    padding: 10px 18px;
+
+    color: #4ade80;
+    font-size: 1.0rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 15px rgba(34, 197, 94, 0.08),
+        inset 0 0 15px rgba(34, 197, 94, 0.03);
+
+    animation: successAppear 0.5s ease-out,
+               successGlow 2.5s ease-in-out infinite;
+}
+
+.success-message::before {
+    content: "✓";
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #22c55e;
+    animation: checkPulse 1.5s ease-in-out infinite;
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    width: fit-content;
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 16x 28px;
+
+    color: #ff7777;
+    font-size: 1.0rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+
+    background: rgba(255, 70, 70, 0.08);
+    border: 1px solid rgba(255, 90, 90, 0.4);
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 15px rgba(255, 70, 70, 0.08),
+        inset 0 0 15px rgba(255, 70, 70, 0.03);
+
+    animation: errorAppear 0.5s ease-out,
+               errorGlow 2.5s ease-in-out infinite;
+}
+
+.error-message::before {
+    content: "⚠";
+    font-size: 1.4rem;
+    color: #ff6b6b;
+    animation: warningPulse 1.5s ease-in-out infinite;
+}
+
+.contact_form button:disabled{
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fazil_connect{
+  flex: 1;
+  height: 90vh;
+  margin-bottom: 30px;
+}
+
+.connect_head{
+  display: grid;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.connect_label{
+  font-size: 2.5rem;
+  color: #8800FF;
+  letter-spacing: 0.25rem;
+  font-family: 'Asul';
+}
+
+.connect_title{
+  font-size: 3.5rem;
+  font-family: 'Asul';
+}
+
+.connect_body{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.connect_body a{
+   text-decoration: none;
+}
+
+.book_call{
+  width: 35%;
+}
+
+.book_call_title{
+  font-size: 7.3rem;
+  line-height: 1.4;
+  font-family: 'asul';
+  margin-bottom: 40px;
+}
+
+.book_call_title b{
+  display: inline-block;
+  color: #FF9B53;
+  transform-origin: center;
+  animation: textMove 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.book_call button{
+  padding: 15px 30px;
+  font-size: 2rem;
+  font-family: 'asul';
+  font-weight: bold;
+  background-color: #FF9B53;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: scaleIn 0.6s 0.3s ease both;
+}
+
+.book_call button:hover{
+  box-shadow: 0 10px 20px rgba(248, 155, 82, 0.3);
+}
+
+.connect_apps{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  width: 50%;
+  margin-top: 50px;
+}
+
+.apps_title{
+  font-size: 2.6rem;
+  font-family: 'asul';
+  color: #ffffff4a;
+  margin-bottom: 80px;
+}
+
+.apps_tags{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 90px 80px;
+  width: 100%;
+}
+
+.apps_tag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 80px;
+  gap: 15px;
+  font-size: 1.5rem;
+  font-family: 'asul';
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    rgba(35, 35, 45, 0.9),
+    rgba(20, 20, 28, 0.95)
+  );
+
+  border: 1px solid rgba(136, 0, 255, 0.4);
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(136, 0, 255, 0.08);
+
+  transform-style: preserve-3d;
+  animation: aboutFloat 5s ease-in-out infinite;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.apps_tag:hover{
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #FF9B53;
+  color: #FF9B53;
+  animation: skill360 5s ease-in-out infinite;
+}
+
+.apps_tag img{
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.apps_tag span{
+  white-space: nowrap;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer .footer_name,
+.footer .footer_built{
+  font-family: 'asul';
+  font-size: 1.25rem;
+  color: #ffffff4a;
+  transition: color 0.3s ease;
+}
+
+.footer .footer_name:hover,
+.footer .footer_built:hover{
+  color: #ffffff99;
+}
+
+@media (max-width: 1280px) {
+
+  .home-page {
+    padding: 0 60px;
+  }
+
+  /* Navbar */
+  .nav {
+    padding: 0 4%;
+  }
+
+  .nav_link {
+    gap: 30px;
+    padding: 12px 30px;
+  }
+
+  .nav_link a {
+    font-size: 1rem;
+  }
+
+  /* Common headings */
+  .about_label,
+  .skill_label,
+  .connect_label,
+  .contact_label,
+  .projects_label,
+  .background_label {
+    font-size: 2rem;
+  }
+
+  .apps_title,
+  .about_title,
+  .skill_title,
+  .contact_title,
+  .connect_title,
+  .projects_title,
+  .background_title {
+    font-size: 3rem;
+  }
+
+  /* Home */
+  .fazil_avalability {
+    font-size: 0.85rem;
+    max-width: 25%;
+  }
+
+  .home_name {
+    font-size: 5rem;
+  }
+
+  .home_role {
+    font-size: 2.2rem;
+  }
+
+  .home_skill {
+    font-size: 1.6rem;
+  }
+
+  .home_viewwork,
+  .home_hireme {
+    font-size: 1.4rem;
+  }
+
+  .home_content,
+  .home_content_colored,
+  .home_content_colord_data {
+    font-size: 5rem;
+  }
+
+  .home_content_icon {
+    width: 120px;
+  }
+
+  /* About */
+  .fazil_about {
+    min-height: auto;
+    margin-bottom: 100px;
+  }
+
+  .about_card {
+    padding: 40px 30px;
+  }
+
+  .about_text {
+    font-size: 1.55rem;
+    line-height: 1.7;
+    padding: 15px;
+  }
+
+  /* Skills */
+  .fazil_skill {
+    height: auto;
+    margin-bottom: 100px;
+  }
+
+  .skill_grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 25px;
+    margin-top: 60px;
+    justify-items: center;
+  }
+
+  .skill_card {
+    width: 180px;
+    height: 90px;
+    font-size: 1.2rem;
+  }
+
+  .center-left,
+  .center-right {
+    grid-column: auto;
+  }
+
+  /* Projects */
+  .fazil_projects {
+    height: auto;
+    margin-bottom: 100px;
+  }
+
+  .projects_head {
+    margin-bottom: 30px;
+  }
+
+  .projects_grid {
+    gap: 30px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project_card {
+    width: 25rem;
+    height: 30rem;
+    padding: 30px;
+  }
+
+  .project_title {
+    font-size: 1.05rem;
+  }
+
+  .project_name {
+    font-size: 1.4rem;
+  }
+
+  .project_description {
+    font-size: 1.05rem;
+  }
+
+  .project_card a {
+    font-size: 1rem;
+  }
+
+  .project_future {
+    font-size: 1rem;
+  }
+
+  /* Experience */
+  .fazil_background {
+    height: auto;
+    margin-bottom: 100px;
+  }
+
+  .background_grid {
+    grid-template-columns: 220px 1fr;
+    gap: 50px;
+  }
+
+  .background_year {
+    font-size: 1.2rem;
+  }
+
+  .background_role {
+    font-size: 1.7rem;
+  }
+
+  .background_org {
+    font-size: 1.5rem;
+  }
+
+  .background_detail {
+    font-size: 1.15rem;
+  }
+
+  /* Contact */
+  .contact_form {
+    height: auto;
+  }
+
+  .contact_subtitle {
+    font-size: 1.2rem;
+  }
+
+  .contact_form input,
+  .contact_form textarea {
+    font-size: 1.15rem;
+    padding: 15px 19px;
+  }
+
+  .contact_form textarea {
+    min-height: 200px;
+  }
+
+  .contact_form button {
+    font-size: 1.25rem;
+    padding: 15px 25px;
+  }
+
+  /* Connect */
+  .fazil_connect {
+    height: auto;
+    margin-bottom: 80px;
+  }
+
+  .book_call_title {
+    font-size: 5rem;
+  }
+
+  .book_call button {
+    font-size: 1.5rem;
+  }
+
+  .apps_title {
+    font-size: 1.5rem;
+  }
+
+  .apps_tags {
+    gap: 40px 30px;
+  }
+
+  .apps_tag {
+    width: 180px;
+    font-size: 1.2rem;
+  }
+
+  /* Footer */
+  .footer .footer_name,
+  .footer .footer_built {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .home-page {
+    padding: 0 40px;
+  }
+
+  /* Navbar */
+  .nav {
+    padding: 0 3%;
+  }
+
+  .nav_link {
+    gap: 22px;
+    padding: 12px 22px;
+  }
+
+  .nav_link a {
+    font-size: 0.95rem;
+  }
+
+  /* Common headings */
+  .apps_title,
+  .about_title,
+  .skill_title,
+  .contact_title,
+  .connect_title,
+  .projects_title,
+  .background_title {
+    font-size: 2.7rem;
+  }
+
+  /* Home */
+  .fazil_home {
+    min-height: 75vh;
+    height: auto;
+  }
+
+  .fazil_avalability {
+    font-size: 0.75rem;
+    max-width: 30%;
+  }
+
+  .home_name {
+    font-size: 4.15rem;
+  }
+
+  .home_role {
+    font-size: 2rem;
+  }
+
+  .home_skill {
+    font-size: 1.45rem;
+  }
+
+  .home_viewwork,
+  .home_hireme {
+    font-size: 1.2rem;
+  }
+
+  .home_content,
+  .home_content_colored,
+  .home_content_colord_data {
+    font-size: 4.25rem;
+  }
+
+  .home_content_icon {
+    width: 110px;
+  }
+
+  /* About */
+  .fazil_about {
+    margin-bottom: 90px;
+  }
+
+  .about_card {
+    padding: 35px 25px;
+  }
+
+  .about_text {
+    font-size: 1.4rem;
+    line-height: 1.7;
+  }
+
+  /* Skills */
+  .fazil_skill {
+    margin-bottom: 90px;
+  }
+
+  .skill_grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+  }
+
+  .skill_card {
+    width: 155px;
+    height: 80px;
+    font-size: 1.05rem;
+    gap: 10px;
+  }
+
+  .skill_card img {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Projects */
+  .fazil_projects {
+    margin-bottom: 90px;
+  }
+
+  .projects_grid {
+    gap: 25px;
+  }
+
+  .project_card {
+    width: 22rem;
+    height: 27rem;
+    padding: 25px;
+  }
+
+  .project_title {
+    font-size: 1rem;
+  }
+
+  .project_name {
+    font-size: 1.25rem;
+  }
+
+  .project_description {
+    font-size: 1rem;
+  }
+
+  .project_tags {
+    gap: 12px;
+  }
+
+  .project_tags span {
+    font-size: 0.8rem;
+  }
+
+  .project_card a {
+    font-size: 0.9rem;
+  }
+
+  /* Experience */
+  .fazil_background {
+    margin-bottom: 90px;
+  }
+
+  .background_grid {
+    grid-template-columns: 180px 1fr;
+    gap: 35px;
+  }
+
+  .background_year {
+    font-size: 1.05rem;
+  }
+
+  .background_role {
+    font-size: 1.4rem;
+  }
+
+  .background_org {
+    font-size: 1.3rem;
+  }
+
+  .background_detail {
+    font-size: 1.05rem;
+  }
+
+  /* Contact */
+  .contact_form {
+    height: auto;
+  }
+
+  .contact_form input,
+  .contact_form textarea {
+    font-size: 1rem;
+    padding: 14px 17px;
+  }
+
+  .contact_form textarea {
+    min-height: 180px;
+  }
+
+  .contact_form button {
+    font-size: 1.15rem;
+    padding: 15px 22px;
+  }
+
+  .background_grid {
+        grid-template-columns: 160px minmax(0, 1fr);
+        gap: 35px;
+    }
+
+    .background_card {
+        padding: 30px;
+    }
+
+    .background_role {
+        font-size: 1.8rem;
+    }
+
+  /* Connect */
+  .fazil_connect {
+    margin-bottom: 70px;
+  }
+
+  .connect_body {
+    gap: 30px;
+  }
+
+  .book_call {
+    width: 40%;
+  }
+
+  .book_call_title {
+    font-size: 4rem;
+  }
+
+  .book_call button {
+    font-size: 1.2rem;
+  }
+
+  .connect_apps {
+    width: 55%;
+  }
+
+  .apps_title {
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+  }
+
+  .apps_tags {
+    gap: 25px 15px;
+  }
+
+  .apps_tag {
+    width: 145px;
+    height: 70px;
+    font-size: 1.05rem;
+  }
+
+  .apps_tag img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .home-page {
+    padding: 0 30px;
+  }
+
+  .nav {
+    height: auto;
+    min-height: 75px;
+    margin-top: 0;
+    padding: 12px 25px;
+    gap: 15px;
+  }
+
+  .nav_mark {
+    font-size: 1.4rem;
+  }
+
+  .nav_link {
+    gap: 15px;
+    padding: 10px 15px;
+    border-radius: 14px;
+  }
+
+  .nav_link a {
+    font-size: 0.85rem;
+  }
+
+ .home_details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    min-height: 70vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home_left,
+.home_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.home_content_colored {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+  /* Common headings */
+  .about_label,
+  .skill_label,
+  .connect_label,
+  .contact_label,
+  .projects_label,
+  .background_label {
+    font-size: 1.7rem;
+  }
+
+  .apps_title,
+  .about_title,
+  .skill_title,
+  .contact_title,
+  .connect_title,
+  .projects_title,
+  .background_title {
+    font-size: 2.4rem;
+  }
+
+  .about_head,
+  .skill_head,
+  .connect_head,
+  .contact_head,
+  .background_head {
+    margin-bottom: 25px;
+  }
+
+  /* Home */
+  .fazil_home {
+    min-height: auto;
+    height: auto;
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+
+  .fazil_avalability {
+    font-size: 0.85rem;
+    max-width: 50%;
+  }
+
+  .home_details {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .home_left,
+  .home_right {
+    width: 100%;
+  }
+
+  .home_content,
+  .home_content_colored,
+  .home_content_colord_data {
+    font-size: 3.5rem;
+  }
+
+  .home_content_icon {
+    width: 90px;
+  }
+
+  .home_name {
+    font-size: 3.8rem;
+  }
+
+  .home_role {
+    font-size: 2rem;
+  }
+
+  .home_skill {
+    font-size: 1.5rem;
+  }
+
+  .home_viewwork,
+  .home_hireme {
+    font-size: 1.2rem;
+  }
+
+  /* About */
+  .fazil_about {
+    min-height: auto;
+    margin-bottom: 80px;
+  }
+
+  .about_card {
+    padding: 30px 20px;
+  }
+
+  .about_card_content {
+    padding: 20px 0;
+  }
+
+  .about_text {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    padding: 10px;
+  }
+
+  .about_card_footer {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
+
+  /* Skills */
+  .fazil_skill {
+    height: auto;
+    margin-bottom: 80px;
+  }
+
+  .skill_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 45px;
+  }
+
+  .skill_card {
+    width: 100%;
+    max-width: 190px;
+    height: 85px;
+    font-size: 1.15rem;
+  }
+
+  .skill_card img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .center-left,
+  .center-right {
+    grid-column: auto;
+  }
+
+  /* Projects */
+  .fazil_projects {
+    height: auto;
+    margin-bottom: 80px;
+  }
+
+  .projects_head {
+    margin-bottom: 25px;
+  }
+
+  .projects_grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .project_card {
+    width: 100%;
+    max-width: 480px;
+    height: 30rem;
+    padding: 30px;
+  }
+
+  .project_title {
+    font-size: 1.2rem;
+  }
+
+  .project_name {
+    font-size: 1.6rem;
+  }
+
+  .project_description {
+    font-size: 1.15rem;
+  }
+
+  .project_tags {
+    gap: 12px;
+  }
+
+  .project_tags span {
+    font-size: 0.9rem;
+  }
+
+  .project_card a {
+    font-size: 1.1rem;
+  }
+
+  /* Experience */
+  .fazil_background {
+    height: auto;
+    margin-bottom: 80px;
+  }
+
+  .background_grid {
+    grid-template-columns: 150px 1fr;
+    gap: 25px;
+  }
+
+  .background_year {
+    font-size: 1rem;
+  }
+
+  .background_role {
+    font-size: 1.3rem;
+  }
+
+  .background_org {
+    font-size: 1.2rem;
+  }
+
+  .background_detail {
+    font-size: 1rem;
+  }
+
+  /* Contact */
+  .contact_form {
+    height: auto;
+  }
+
+  .contact_subtitle {
+    font-size: 1.1rem;
+  }
+
+  .contact_input {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact_form input,
+  .contact_form textarea {
+    font-size: 1.1rem;
+    padding: 15px 18px;
+  }
+
+  .contact_form textarea {
+    min-height: 200px;
+  }
+
+  .contact_form button {
+    font-size: 1.3rem;
+    padding: 15px 22px;
+  }
+
+  /* Connect */
+  .fazil_connect {
+    height: auto;
+    margin-bottom: 60px;
+  }
+
+  .connect_body {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .fazil_background {
+        height: auto;
+    }
+
+    .background_title {
+        font-size: 2.5rem;
+    }
+
+    .background_grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .background_year {
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+    .background_card {
+        padding: 25px;
+    }
+
+    .background_role {
+        font-size: 1.6rem;
+    }
+
+    .background_org {
+        font-size: 1.35rem;
+    }
+
+    .background_detail {
+        font-size: 1rem;
+    }
+
+  .book_call {
+    width: 100%;
+  }
+
+  .book_call_title {
+    font-size: 3.8rem;
+  }
+
+  .book_call button {
+    font-size: 1.2rem;
+  }
+
+  .connect_apps {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .apps_title {
+    font-size: 1.6rem;
+    margin-bottom: 35px;
+  }
+
+  .apps_tags {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .apps_tag {
+    width: 100%;
+    height: 75px;
+    font-size: 1.1rem;
+  }
+
+  .apps_tag img {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Footer */
+  .footer {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .footer .footer_name,
+  .footer .footer_built {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .home-page {
+    padding: 0 20px;
+  }
+
+  .nav {
+    min-height: 65px;
+    padding: 10px 15px;
+    gap: 10px;
+  }
+
+  .nav_mark {
+    font-size: 1.2rem;
+    padding: 5px 8px;
+  }
+
+  .nav_link {
+    gap: 9px;
+    padding: 9px 10px;
+    border-radius: 12px;
+  }
+
+  .nav_link a {
+    font-size: 0.68rem;
+  }
+
+  /* Common headings */
+  .about_label,
+  .skill_label,
+  .connect_label,
+  .contact_label,
+  .projects_label,
+  .background_label {
+    font-size: 1.2rem;
+  }
+
+  .apps_title,
+  .about_title,
+  .skill_title,
+  .contact_title,
+  .connect_title,
+  .projects_title,
+  .background_title {
+    font-size: 2rem;
+  }
+
+  .about_head,
+  .skill_head,
+  .connect_head,
+  .contact_head,
+  .background_head {
+    margin-bottom: 20px;
+  }
+
+  /* Home */
+  .fazil_home {
+    min-height: auto;
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .fazil_avalability {
+    font-size: 0.65rem;
+    max-width: 50%;
+    padding: 8px;
+  }
+
+  .home_details {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .home_content,
+  .home_content_colored,
+  .home_content_colord_data {
+    font-size: 3.0rem;
+  }
+
+  .home_content_icon {
+    width: 75px;
+  }
+
+  .home_name {
+    font-size: 3.5rem;
+  }
+
+  .home_role {
+    font-size: 2.3rem;
+  }
+
+  .home_skill {
+    font-size: 2.0rem;
+  }
+
+  .home_buttons {
+    gap: 15px;
+  }
+
+  .home_viewwork,
+  .home_hireme {
+    font-size: 1.5rem;
+    padding: 12px 15px;
+  }
+
+  /* About */
+  .fazil_about {
+    min-height: auto;
+    margin-bottom: 65px;
+  }
+
+  .about_card {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+
+  .about_card_top {
+    padding-bottom: 15px;
+  }
+
+  .about_card_dot {
+    width: 9px;
+    height: 9px;
+  }
+
+  .about_card_tag {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+  }
+
+  .about_card_content {
+    padding: 15px 0;
+  }
+
+  .about_text {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 5px;
+  }
+
+  .about_card_footer {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.6rem;
+  }
+
+  /* Skills */
+  .fazil_skill {
+    height: auto;
+    margin-bottom: 65px;
+  }
+
+  .skill_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .skill_card {
+    width: 100%;
+    height: 65px;
+    gap: 8px;
+    font-size: 0.85rem;
+    border-radius: 15px;
+  }
+
+  .skill_card img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .background_title {
+        font-size: 2rem;
+    }
+
+    .background_card {
+        padding: 20px;
+    }
+
+    .background_card_type {
+        font-size: 0.6rem;
+    }
+
+    .background_card_footer {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+
+  /* Projects */
+  .fazil_projects {
+    height: auto;
+    margin-bottom: 65px;
+  }
+
+  .projects_head {
+    margin-bottom: 20px;
+  }
+
+  .projects_grid {
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .project_card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 27rem;
+    padding: 22px;
+    box-sizing: border-box;
+  }
+
+  .project_title {
+    font-size: 1rem;
+  }
+
+  .project_name {
+    font-size: 1.35rem;
+  }
+
+  .project_description {
+    font-size: 0.95rem;
+  }
+
+  .project_tags {
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
+    gap: 10px;
+  }
+
+  .project_tags span {
+    font-size: 0.75rem;
+  }
+
+  .project_card a {
+    font-size: 0.95rem;
+  }
+
+  .project_future {
+    font-size: 1rem;
+  }
+
+  /* Experience */
+  .fazil_background {
+    height: auto;
+    margin-bottom: 65px;
+  }
+
+  .background_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+
+  .background_year {
+    font-size: 0.9rem;
+  }
+
+  .background_role {
+    font-size: 1.2rem;
+  }
+
+  .background_org {
+    font-size: 1.1rem;
+  }
+
+  .background_detail {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* Contact */
+  .contact_form {
+    height: auto;
+    gap: 20px;
+  }
+
+  .contact_input {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact_form input,
+  .contact_form textarea {
+    font-size: 0.95rem;
+    padding: 13px 15px;
+  }
+
+  .contact_form textarea {
+    min-height: 160px;
+  }
+
+  .contact_form button {
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: 14px 18px;
+    letter-spacing: 3px;
+  }
+
+  .success-message,
+  .error-message {
+    font-size: 1rem;
+  }
+
+  .error-message {
+    font-size: 0.85rem;
+    padding: 12px 16px;
+    gap: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .error-message::before {
+    font-size: 1.1rem;
+  }
+
+  .success-message {
+    font-size: 0.85rem;
+    padding: 12px 16px;
+    gap: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .success-message::before {
+      font-size: 1.1rem;
+  }
+
+  /* Connect */
+  .fazil_connect {
+    height: auto;
+    margin-bottom: 45px;
+  }
+
+  .connect_body {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .book_call {
+    width: 100%;
+  }
+
+  .book_call_title {
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin-bottom: 25px;
+  }
+
+  .book_call button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .connect_apps {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .apps_title {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+  }
+
+  .apps_tags {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .apps_tag {
+    width: 100%;
+    height: 65px;
+    gap: 8px;
+    font-size: 0.85rem;
+    border-radius: 14px;
+  }
+
+  .apps_tag img {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .footer .footer_name,
+  .footer .footer_built {
+    font-size: 0.8rem;
+  }
+}
+

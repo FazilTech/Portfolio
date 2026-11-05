@@ -1,0 +1,162 @@
+<div class="home-page">
+  
+  <header class="nav">
+    <div class="nav_mark">FA</div>
+    <div class="nav_link">
+      <a href="#">Work</a>
+      <a href="#">Stack</a>
+      <a href="#">Experience</a>
+      <a href="#">Contact</a>
+    </div>
+  </header>
+
+  <section class="fazil_home">
+    <div class="fazil_avalability">🟢 AVALIABLE FOR WORK</div>
+
+    <div class="home_details">
+
+      <div class="home_left">
+        <h1 class="home_name">Fazil Ahamed</h1>
+        <p class="home_role">Full Stack Developer</p>
+        <p class="home_skill">Angular | Spring Boot | Figma</p>
+        <div class="home_buttons">
+          <div class="home_viewwork">View Work</div>
+          <div class="home_hireme">Hire Me ✓</div>
+        </div>
+      </div>
+
+      <div class="home_right">
+        <p class="home_content">Build degital <br>products, brands</p>
+        <div class="home_content_colored">
+          <img class="home_content_icon" src="/SettingData.svg">
+          <p class="home_content_colord_data"> experience</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+  <hr class="section_divider">
+  
+  <section class="fazil_about">
+    <div class="about_head">
+      <div class="about_label">About</div>
+      <div class="about_title">How I Build</div>
+    </div>
+    <div class="about_body">
+      <p class="about_text">
+        I'm an enthusiastic, results-driven Full Stack Developer with a B.Tech in Computer Science and 
+        Engineering, specializing in Data Science and Full Stack Development. I build modern, scalable web 
+        applications using Angular for dynamic front-ends and Spring Boot for robust back-end systems, with 
+        Figma for crafting clean, user-centric UI/UX designs. I'm skilled in Python and Java with a strong 
+        foundation in software development and data analysis, and I bring a product-focused mindset to every 
+        project — taking ideas from concept to launch on my own. I'm committed to delivering high-quality, 
+        end-to-end solutions tailored to your business needs.
+      </p>
+    </div>
+    
+  </section>
+
+  <hr class="section_divider">
+
+  <section class="fazil_skill">
+    <div class="skill_head">
+      <div class="skill_label">Toolkit</div>
+      <div class="skill_title">Skills & Tools</div>
+    </div>
+    <div class="skill_grid">
+      <div class="skill_card" *ngFor="let skill of skills, let i = index"
+           [class.center-left]="i === 8"
+           [class.center-right]="i === 9">
+        {{skill}}
+      </div>
+    </div>
+  </section>
+
+  <hr class="section_divider">
+
+  <section class="fazil_projects">
+    <div class="projects_head">
+      <div class="projects_label">Selected Work</div>
+      <div class="projects_title">Projects</div>
+    </div>
+    <div class="projects_grid">
+      <div class="project_card" *ngFor="let item of project, let i = index">
+        <p class="project_title">{{item.title}}</p>
+        <p class="project_name">{{item.project_name}}</p>
+        <p class="project_description">{{item.description}}</p>
+        <div class="project_tags">
+          <span  *ngFor="let tag of item.tags">{{tag}}</span>
+        </div>
+        <a [href]="item.link">View Projects →</a>
+      </div>
+    </div>
+    <div class="project_future">More projects in progress - portfolio updated regularly</div>
+  </section>
+
+  <hr class="section_divider">
+
+  <section class="fazil_background">
+    <div class="background_head">
+      <div class="background_label">Background</div>
+      <div class="background_title">Experience & Education</div>
+    </div>
+    <div class="background_grid" *ngFor="let item of experience">
+      <div class="background_year">{{item.period}}</div>
+      <div class="background_card">
+        <div class="background_role">{{item.role}}</div>
+        <div class="background_org">{{item.org}}</div>
+        <div class="background_detail">{{item.detail}}</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section_divider">
+
+  <section class="fazil_contact">
+    <div class="contact_head">
+      <div class="contact_label">Contact Me</div>
+      <div class="contact_title">Contact with me to Work togeather</div>
+      <div class="contact_subtitle">Fell free to contact me if you having any questions. I'm avaliable for new projects.</div>
+    </div>
+
+    <form class="contact_form">
+      <div class="contact_input">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+      </div>
+      <textarea
+        placeholder="Work Description...."
+      ></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <hr class="section_divider">
+
+  <section class="fazil_connect">
+    <div class="connect_head">
+      <div class="connect_label">Let's work togeather</div>
+      <div class="connect_title">Start a project</div>
+    </div>
+    <div class="connect_body">
+      <div class="book_call">
+        <div class="book_call_title">Let's Connect and Chat</div>
+        <button type="submit">Book a Call</button>
+      </div>
+      <div class="connect_apps">
+        <div class="apps_title">Have a web app, dashboard,
+             or platform you'd like built? I'd love to hear about it.</div>
+        <div class="apps_tags">
+          <div class="apps_tag" *ngFor="let item of conntectapp">{{item}}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="footer_name">@2026 Fazil Ahamed</div>
+    <div class="footer_built">Designed in Figma . Built with Angular</div>
+  </div>
+
+</div>

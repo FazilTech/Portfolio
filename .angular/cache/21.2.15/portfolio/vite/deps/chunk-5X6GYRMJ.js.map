@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/@tsparticles/interaction-particles-collisions/browser/ErrorCodes.js"],
+  "sourcesContent": ["export const ErrorCodes = {\n    overlapNotPlaced: \"TSP-4001\",\n};\n"],
+  "mappings": ";AAAO,IAAM,aAAa;AAAA,EACtB,kBAAkB;AACtB;",
+  "names": []
+}

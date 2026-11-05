@@ -1,0 +1,136 @@
+<div class="page">
+
+  <!-- NAV -->
+  <header class="nav">
+    <span class="nav__mark">FA</span>
+    <nav class="nav__links">
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__eyebrow">// available for freelance work</div>
+    <h1 class="hero__name">Fazil Ahamed</h1>
+    <p class="hero__role">Full Stack Developer</p>
+    <p class="hero__lede">
+      I design, build, and ship complete web applications &mdash;
+      from Figma wireframes to Angular interfaces backed by Spring Boot APIs,
+      with a foundation in data analysis along the way.
+    </p>
+
+    <div class="hero__stack" aria-label="My development stack, layer by layer">
+      <div class="stack-layer" *ngFor="let layer of stack; let i = index"
+           [style.--delay]="i"
+           [class]="'stack-layer--' + layer.color">
+        <span class="stack-layer__index">{{ layer.label }}</span>
+        <span class="stack-layer__tool">{{ layer.tool }}</span>
+      </div>
+    </div>
+
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#work">View work</a>
+      <a class="btn btn--ghost" href="#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-head">
+      <span class="section-head__label">About</span>
+      <h2 class="section-head__title">How I build</h2>
+    </div>
+    <p class="about__text">
+      I'm an enthusiastic, results-driven Full Stack Developer with a B.Tech in
+      Computer Science and Engineering, specializing in Data Science and Full
+      Stack Development. I build modern, scalable web applications using
+      Angular for dynamic front-ends and Spring Boot for robust back-end systems,
+      with Figma for crafting clean, user-centric UI/UX designs. I'm skilled in
+      Python and Java with a strong foundation in software development and data
+      analysis, and I bring a product-focused mindset to every project &mdash;
+      taking ideas from concept to launch on my own. I'm committed to delivering
+      high-quality, end-to-end solutions tailored to your business needs.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="stack">
+    <div class="section-head">
+      <span class="section-head__label">Toolkit</span>
+      <h2 class="section-head__title">Skills &amp; Tools</h2>
+    </div>
+    <ul class="skills__list">
+      <li *ngFor="let skill of skills" class="skills__item">{{ skill }}</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="work" id="work">
+    <div class="section-head">
+      <span class="section-head__label">Selected work</span>
+      <h2 class="section-head__title">Projects</h2>
+    </div>
+
+    <div class="work__grid">
+      <article class="project-card" *ngFor="let project of projects">
+        <div class="project-card__layer">{{ project.layer }}</div>
+        <h3 class="project-card__title">{{ project.title }}</h3>
+        <p class="project-card__desc">{{ project.description }}</p>
+        <div class="project-card__tags">
+          <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+        </div>
+        <a class="project-card__link" [href]="project.link">View project &rarr;</a>
+      </article>
+    </div>
+
+    <p class="work__note">
+      More projects in progress &mdash; portfolio updated regularly.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="section-head">
+      <span class="section-head__label">Background</span>
+      <h2 class="section-head__title">Experience &amp; Education</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__item" *ngFor="let item of experience">
+        <div class="timeline__period">{{ item.period }}</div>
+        <div class="timeline__content">
+          <h3 class="timeline__role">{{ item.role }}</h3>
+          <p class="timeline__org">{{ item.org }}</p>
+          <p class="timeline__detail">{{ item.detail }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-head">
+      <span class="section-head__label">Let's work together</span>
+      <h2 class="section-head__title">Start a project</h2>
+    </div>
+    <p class="contact__text">
+      Have a web app, dashboard, or platform you'd like built? I'd love to hear
+      about it.
+    </p>
+    <div class="contact__links">
+      <a class="contact__link" href="mailto:your.email@example.com">Email</a>
+      <a class="contact__link" href="#">LinkedIn</a>
+      <a class="contact__link" href="#">Fiverr</a>
+      <a class="contact__link" href="#">GitHub</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>&copy; {{ year }} Fazil Ahamed</span>
+    <span class="footer__sig">Designed in Figma &middot; Built with Angular</span>
+  </footer>
+
+</div>
