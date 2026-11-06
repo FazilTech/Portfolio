@@ -1,20 +1,12 @@
-* {
-    box-sizing: border-box;
-}
-
-html{
-  scroll-behavior: smooth;
-  width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: 100px;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
 }
 
 @keyframes fadeUp {
@@ -284,9 +276,12 @@ body {
 
 .home-page {
   width: 100%;
-  padding: 0 120px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 6.25vw, 120px);
   position: relative;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
 ngx-particles {
@@ -429,76 +424,107 @@ ngx-particles canvas {
   transition: all 0.3s ease;
 }
 
-.fazil_home{
-  padding: 20px 0px;
-  height: 95vh;
+.fazil_home {
+  padding: 20px 0;
+  min-height: 95vh;
+  height: auto;
   display: flex;
   flex-direction: column;
-  padding-top: 200px;
+  padding-top: clamp(140px, 12vw, 200px);
+  padding-bottom: 40px;
 }
 
-.fazil_avalability{
+.fazil_avalability {
   font-size: 1.05rem;
   letter-spacing: 0.14rem;
   color: green;
   background-color: #D0FFC4;
   border: 1px solid #007910;
   font-weight: bold;
-  padding: 10px 10px;
-  max-width: 17%;
+  padding: 10px;
+  width: fit-content;
+  max-width: 100%;
   border-radius: 20px;
-  animation: fadeIn 0.6s 0.3s ease both, availPulse 2.5s 1s infinite;
+  animation: fadeIn 0.6s 0.3s ease both,
+             availPulse 2.5s 1s infinite;
 }
 
-.home_details{
+.home_details {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: clamp(25px, 3vw, 60px);
 }
 
 .home_left,
-.home_right{
+.home_right {
   flex: 1;
   min-width: 0;
 }
 
-.home_name{
-  font-size: 6.5rem;
+.home_name {
+  font-size: clamp(3.5rem, 5vw, 6.5rem);
   font-family: 'Abhaya Libre SemiBold';
   line-height: 1.1;
   margin: 0 0 10px;
-  animation: fadeRight 0.8s 0.4s cubic-bezier(0.22, 1, 0.36, 1) both, typeCaret 0.5s 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: fadeRight 0.8s 0.4s cubic-bezier(0.22, 1, 0.36, 1) both,
+             typeCaret 0.5s 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.home_role{
-  font-size: 2.8rem;
+.home_role {
+  font-size: clamp(1.6rem, 2.2vw, 2.8rem);
   font-family: 'Times New Roman', Times, serif;
   color: #FF9B53;
   margin: 0 0 6px;
   animation: fadeRight 0.8s 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.home_skill{
+.home_skill {
   font-family: 'Aubrey';
-  font-size: 2rem;
-  padding: 10px 0px 20px;
+  font-size: clamp(1.2rem, 1.6vw, 2rem);
+  padding: 10px 0 20px;
   margin: 0;
   animation: fadeRight 0.8s 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.home_buttons{
+.home_content,
+.home_content_colord_data {
+  font-size: clamp(3rem, 5vw, 6.5rem);
+  font-family: 'Asul';
+}
+
+.home_content {
+  animation: fadeLeft 0.8s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home_content_colored {
   display: flex;
   align-items: center;
-  gap: 30px;
+  animation: fadeLeft 0.8s 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home_content_icon {
+  width: clamp(75px, 8vw, 160px);
+  height: auto;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.home_buttons {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 30px);
   padding: 25px 0;
   flex-wrap: wrap;
   animation: fadeUp 0.8s 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .home_viewwork,
-.home_hireme{
+.home_hireme {
+  font-size: clamp(1.1rem, 1.5vw, 1.75rem);
   cursor: pointer;
 }
 
@@ -1966,6 +1992,115 @@ ngx-particles canvas {
   .apps_tag img {
     width: 35px;
     height: 35px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .home-page {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .fazil_home {
+    min-height: 80vh;
+    height: auto;
+    padding-top: 160px;
+    padding-bottom: 50px;
+  }
+
+  .home_details {
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .home_left,
+  .home_right {
+    flex: 1;
+    width: 50%;
+    min-width: 0;
+  }
+
+  .home_name {
+    font-size: clamp(3rem, 5vw, 4rem);
+  }
+
+  .home_role {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+  }
+
+  .home_skill {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+  }
+
+  .home_content,
+  .home_content_colord_data {
+    font-size: clamp(2.6rem, 4vw, 3.5rem);
+    line-height: 1.2;
+  }
+
+  .home_content_icon {
+    width: 90px;
+  }
+
+  .home_buttons {
+    gap: 12px;
+  }
+
+  .home_viewwork,
+  .home_hireme {
+    font-size: 1.1rem;
+    padding: 12px 18px;
+  }
+
+  .fazil_avalability {
+    width: fit-content;
+    max-width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .skill_grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px 20px;
+  }
+
+  .skill_card {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .projects_grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .project_card {
+    width: calc(50% - 20px);
+    max-width: 100%;
+    height: auto;
+    min-height: 30rem;
+    padding: 30px;
+  }
+
+  .fazil_skill,
+  .fazil_projects,
+  .fazil_connect {
+    height: auto;
+  }
+
+  .background_grid {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .book_call {
+    width: 45%;
+  }
+
+  .connect_apps {
+    width: 50%;
   }
 }
 
