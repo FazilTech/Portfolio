@@ -1803,3 +1803,333 @@ canvas {
   box-sizing: border-box;
 }
 
+
+/* Mobile layout — restored from the original mobile version */
+@media (max-width: 480px) {
+
+  .home-page {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .nav {
+    min-height: 65px;
+    padding: 10px 15px;
+    gap: 10px;
+  }
+
+  .nav_mark {
+    font-size: 1.2rem;
+    padding: 5px 8px;
+  }
+
+  .nav_link {
+    gap: 9px;
+    padding: 9px 10px;
+    border-radius: 12px;
+  }
+
+  .nav_link a {
+    font-size: 0.68rem;
+  }
+
+  .about_label,
+  .skill_label,
+  .connect_label,
+  .contact_label,
+  .projects_label,
+  .background_label {
+    font-size: 1.1rem;
+  }
+
+  .about_title,
+  .skill_title,
+  .contact_title,
+  .connect_title,
+  .projects_title,
+  .background_title {
+    font-size: 2rem;
+  }
+
+  /* About */
+  .fazil_about {
+    min-height: auto;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .about_card {
+    padding: 16px 12px;
+    border-radius: 15px;
+  }
+
+  .about_card_top {
+    padding-bottom: 15px;
+  }
+
+  .about_card_dot {
+    width: 9px;
+    height: 9px;
+  }
+
+  .about_card_tag {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+  }
+
+  .about_card_content {
+    padding: 15px 0;
+  }
+
+  .about_text {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 5px;
+  }
+
+  .about_card_footer {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.6rem;
+  }
+
+  /* Skills */
+  .fazil_skill {
+    height: auto;
+    min-height: 0;
+    margin-bottom: 50px;
+  }
+
+  .skill_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .skill_card {
+    width: 100%;
+    height: 65px;
+    gap: 8px;
+    font-size: 0.8rem;
+    border-radius: 15px;
+  }
+
+  .skill_card img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Projects */
+  .fazil_projects {
+    height: auto;
+    min-height: 0;
+    margin-bottom: 50px;
+  }
+
+  .projects_grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+
+  .project_card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 330px;
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .project_title {
+    font-size: 1rem;
+  }
+
+  .project_name {
+    font-size: 1.3rem;
+  }
+
+  .project_description {
+    font-size: 0.95rem;
+  }
+
+  .project_tags {
+    grid-template-columns: repeat(2, minmax(0, auto));
+    justify-content: start;
+    gap: 10px;
+  }
+
+  .project_tags span {
+    font-size: 0.75rem;
+  }
+
+  .project_card a {
+    font-size: 0.95rem;
+  }
+
+  .project_future {
+    font-size: 1rem;
+  }
+
+  /* Experience */
+  .fazil_background {
+    height: auto;
+    min-height: 0;
+    margin-bottom: 50px;
+  }
+
+  .background_grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .background_year {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .background_card {
+    min-height: 0;
+    padding: 15px;
+  }
+
+  .background_role {
+    font-size: 1.2rem;
+  }
+
+  .background_org {
+    font-size: 1.05rem;
+  }
+
+  .background_detail {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .background_card_type,
+  .background_card_footer {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+
+  /* Contact */
+  .contact_form {
+    height: auto;
+    gap: 16px;
+  }
+
+  .contact_input {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact_form input,
+  .contact_form textarea {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 13px 15px;
+  }
+
+  .contact_form textarea {
+    min-height: 150px;
+  }
+
+  .contact_form button {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: 13px 18px;
+    letter-spacing: 2px;
+  }
+
+  .success-message,
+  .error-message {
+    max-width: 100%;
+    font-size: 0.8rem;
+    padding: 12px 14px;
+    gap: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .success-message::before,
+  .error-message::before {
+    font-size: 1.1rem;
+  }
+
+  /* Connect */
+  .fazil_connect {
+    height: auto;
+    min-height: 0;
+    margin-bottom: 45px;
+  }
+
+  .connect_body {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .book_call,
+  .connect_apps {
+    width: 100%;
+  }
+
+  .book_call_title {
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .book_call button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .connect_apps {
+    margin-top: 15px;
+  }
+
+  .apps_title {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+  }
+
+  .apps_tags {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .apps_tag {
+    width: 100%;
+    height: 58px;
+    gap: 6px;
+    font-size: 0.8rem;
+    border-radius: 14px;
+  }
+
+  .apps_tag img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .apps_tag span {
+    white-space: normal;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .footer .footer_name,
+  .footer .footer_built {
+    font-size: 0.8rem;
+  }
+}
