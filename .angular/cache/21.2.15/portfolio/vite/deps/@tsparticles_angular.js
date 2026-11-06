@@ -1,8 +1,4 @@
 import {
-  tsParticles
-} from "./chunk-LOASKGXV.js";
-import "./chunk-KIDNQMHF.js";
-import {
   isPlatformServer
 } from "./chunk-S3HEONXT.js";
 import "./chunk-2SYOYM7I.js";
@@ -25,6 +21,10 @@ import {
   ɵɵelement,
   ɵɵproperty
 } from "./chunk-R4ZEFLFC.js";
+import {
+  tsParticles
+} from "./chunk-LOASKGXV.js";
+import "./chunk-KIDNQMHF.js";
 import "./chunk-RSS3ODKE.js";
 import "./chunk-GOMI4DH3.js";
 
