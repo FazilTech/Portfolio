@@ -567,17 +567,6 @@ ngx-particles canvas {
   font-weight: bold;
 }
 
-.home_content{
-  font-size: 6.5rem;
-  font-family: 'Asul';
-  animation: fadeLeft 0.8s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.home_content_colored{
-  display: flex;
-  animation: fadeLeft 0.8s 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
 .icon-3d-wrapper {
   display: inline-flex;
   justify-content: center;
@@ -587,18 +576,7 @@ ngx-particles canvas {
   animation: settingsRotate 5s ease-in-out infinite;
 }
 
-.home_content_icon {
-  width: 160px;
-  height: auto;
-  transform-style: preserve-3d;
-  transition: transform 0.15s ease-out;
-  will-change: transform;
-  cursor: pointer;
-}
-
 .home_content_colord_data{
-  font-size: 6.5rem;
-  font-family: 'Asul';
   color: #8800FF;
 }
 
@@ -2001,47 +1979,47 @@ ngx-particles canvas {
     padding-left: 40px;
     padding-right: 40px;
   }
-
+  
   .fazil_home {
-    min-height: 80vh;
-    height: auto;
-    padding-top: 160px;
-    padding-bottom: 50px;
+      min-height: 80vh;
+      height: auto;
+      padding-top: 160px;
+      padding-bottom: 50px;
   }
-
+  
   .home_details {
-    flex-direction: row;
-    align-items: center;
-    gap: 25px;
+      flex-direction: row;
+      align-items: center;
+      gap: 25px;
   }
-
+  
   .home_left,
   .home_right {
-    flex: 1;
-    width: 50%;
-    min-width: 0;
+      flex: 1;
+      width: 50%;
+      min-width: 0;
   }
-
+  
   .home_name {
-    font-size: clamp(3rem, 5vw, 4rem);
+      font-size: clamp(3rem, 5vw, 4rem);
   }
-
+  
   .home_role {
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
   }
-
+  
   .home_skill {
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
   }
-
+  
   .home_content,
   .home_content_colord_data {
-    font-size: clamp(2.6rem, 4vw, 3.5rem);
-    line-height: 1.2;
+      font-size: clamp(2.6rem, 4vw, 3.5rem);
+      line-height: 1.2;
   }
-
+  
   .home_content_icon {
-    width: 90px;
+      width: 90px;
   }
 
   .home_buttons {
